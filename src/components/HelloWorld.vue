@@ -142,6 +142,7 @@
       }
 
     localStorage.setItem(nameLocalStorage, JSON.stringify(companyInfoBugHunt))
+    console.log('🚀 ~ file: HelloWorld.vue:147 ~ save ~ router:', router);
     router.push('/assessment')
   }
 </script>
