@@ -53,27 +53,28 @@
             color="orange-lighten-1"
             hover
             density="comfortable"
-            ></v-rating>
-            <br>
-            <br>
-            <v-container class="bg-purple-lighten-5 rounded-lg">
-              <v-row justify="start" align="center">
-                <v-col cols="3">
-                  <v-img
-                    :width="274"
-                    aspect-ratio="4/2"
-                    cover
-                    src="https://d335luupugsy2.cloudfront.net/cms/files/346251/1660578241/$v77v1imwqu"
-                  ></v-img>
-                </v-col>
-                <v-col cols="9">
-                  <v-card-text class="text-body-2 text-center bg-yellow-lighten-2 rounded-xl">
-                    {{ step.observation }}
-                    <!-- <VueWriter :array="textHacker" :delay="1000" :start="2000" :typeSpeed="40" :eraseSpeed="1000000000"/> -->
-                  </v-card-text>
-                </v-col>
-              </v-row>
-            </v-container>
+          ></v-rating>
+          <br>
+          <br>
+          <!-- <v-container class="bg-purple-lighten-5 rounded-lg"> -->
+          <v-container class="bg-yellow-lighten-4 rounded-lg">
+
+            <v-row justify="start" align="center">
+              <v-col cols="3">
+                <v-img
+                  :width="274"
+                  aspect-ratio="4/2"
+                  cover
+                  src="https://d335luupugsy2.cloudfront.net/cms/files/346251/1660578241/$v77v1imwqu"
+                ></v-img>
+              </v-col>
+              <v-col cols="9">
+                <v-card-text class="text-body-2 text-center bg-yellow-lighten-4 rounded-xl">
+                  <VueWriter :array="textHacker" :typeSpeed="60" :eraseSpeed="1000000000"/>
+                </v-card-text>
+              </v-col>
+            </v-row>
+          </v-container>
         </div>
       </v-card>
     </v-col>
@@ -85,7 +86,7 @@ import { namePointsLocalStorage } from '../utils/const'
 export default {
   name: 'Step',
   props: ['step', 'index'],
-  //components: { VueWriter },
+  components: { VueWriter },
   data() {
     return {
       point: localStorage.getItem(`${namePointsLocalStorage}-question${this.index}`) || 0,
